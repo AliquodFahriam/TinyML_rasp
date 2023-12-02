@@ -3,12 +3,12 @@ import tflite_runtime
 from tflite_runtime.interpreter import Interpreter 
 import numpy as np
 
-interpreter = Interpreter("small_lstm_quad.tflite")
+interpreter = Interpreter("../small_lstm_quad.tflite")
 interpreter.allocate_tensors()
 
 input_details = interpreter.get_input_details()
 output_details = interpreter.get_output_details()
-processed_test_data = np.float32(np.load("processed_test_data_np.npy"))
+processed_test_data = np.float32(np.load("../processed_test_data_np.npy"))
 
 
 input_shape = input_details[0]['shape']

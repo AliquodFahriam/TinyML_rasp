@@ -14,9 +14,9 @@ def inference_time_calculator(interpreter, input_full, input_details):
         start_time = time.time()
         interpreter.invoke()
         end_time = time.time() 
-        
+	        
         inference_time = (end_time - start_time)*1e6
-        
+        print(inference_time)
         inference_records.append(inference_time)
     
     for inference_time in inference_records: 

@@ -5,7 +5,7 @@ import time
 TX_PIN = 14
 RX_PIN = 15
 
-ser = serial.Serial(port = '/dev/ttyUSB0', baudrate=115200, timeout = 1) 
+ser = serial.Serial(port = '/dev/ttyACM0', baudrate=115200, timeout = 1) 
 time.sleep(1)
 ser.reset_input_buffer()
 print("Serial OK" )
